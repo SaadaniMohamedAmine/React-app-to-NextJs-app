@@ -1,6 +1,6 @@
 
 //bootstrap sass file 
-@import "../node_modules/bootstrap/scss/bootstrap.scss"; 
+@import "../../node_modules/bootstrap/scss/bootstrap.scss"; 
 
 //bootstrap icons file 
 @import "bootstrap-icons/font/bootstrap-icons.css" ;
@@ -8,7 +8,7 @@
 .home-page, .home-page .container {
     color:#fff;
     min-height: 100vh;
-    background-image:linear-gradient(to bottom, rgba(175, 183, 229, 0.803), rgba(251, 204, 239, 0.73)), url('../public/home.avif'); 
+    background-image:linear-gradient(to bottom, rgba(175, 183, 229, 0.803), rgba(251, 204, 239, 0.73)), url('/public/home.avif'); 
     background-position: center;
     background-repeat: no-repeat; 
     background-size: cover;
