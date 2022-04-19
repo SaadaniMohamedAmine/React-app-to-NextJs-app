@@ -1,29 +1,33 @@
 import React from "react";
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Navbar, Nav, Container } from "react-bootstrap";
+import Link from "next/link";
 
 const Navs = () => {
   return (
     <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">My Website</Navbar.Brand>
+        <Link href="/">
+          <a className="navbar-brand">My Website</a>
+        </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
-            <Link to="/" className="nav-link">
-              Home
+            <Link href="/">
+              <a className="nav-link">Home</a>
             </Link>
-            <Link to="/about" className="nav-link">
-              About
+            <Link href="/about">
+              <a href="/about" className="nav-link">
+                About
+              </a>
             </Link>
-            <Link to="/users" className="nav-link">
-              Random Users
+            <Link href="/users">
+              <a className="nav-link">Random Users</a>
             </Link>
-            <Link to="/users-plat" className="nav-link">
-              Real  Users
+            <Link href="/users-plate">
+              <a className="nav-link">Real Users</a>
             </Link>
-            <Link to="/login" className="nav-link">
-              Login
+            <Link href="/login">
+              <a className="nav-link">Login</a>
             </Link>
           </Nav>
           <Nav></Nav>

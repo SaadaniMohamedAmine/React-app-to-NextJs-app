@@ -1,9 +1,8 @@
 import React from "react";
 import User from "../components/User";
-import useFetch from "../hooks/useFetch";
 
-const Users = () => {
-  const users = useFetch();
+const Users = ({data}) => {
+  const users=data.results
   return (
     <div className="users-page bg-light">
       <div className="container-md py-5">
@@ -32,5 +31,15 @@ const Users = () => {
     </div>
   );
 };
+
+export const getServerSideProps=async pageContext=>{
+  const response=await fetch('https://randomuser.me/api/?results=8') ;
+  const data=await response.json() ;
+  return {
+    props:{
+        data
+    }
+  }
+}
 
 export default Users;

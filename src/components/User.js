@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-router-dom' ;
+import Link from 'next/link' ;
 
 const User = ({ user,type }) => {
 
@@ -14,7 +14,9 @@ const User = ({ user,type }) => {
           <span className="d-flex justify-content-between align-items-center">
             <span>From <span className="text-success">{user.location.country}</span></span>
            {
-             type?  <Link className="btn btn-primary" to={`/users-plat/${user.id.name}`}>Check</Link>:""
+             type?  <Link  href={`/users-plate/${user.id.name}`}>
+               <a className="btn btn-primary">Check</a>
+             </Link>:""
            }
           </span>
         </p>
